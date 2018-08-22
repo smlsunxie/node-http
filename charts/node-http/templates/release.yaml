@@ -1,0 +1,77 @@
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2018-08-22T09:02:21Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+  resourceVersion: "1"
+spec:
+  commits:
+  - author:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      email: smlsun@gmail.com
+      login: smlsunxie
+      name: Smlsun Xie
+      url: https://github.com/smlsunxie
+    branch: master
+    committer:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      email: smlsun@gmail.com
+      login: smlsunxie
+      name: Smlsun Xie
+      url: https://github.com/smlsunxie
+    issueIds:
+    - "2"
+    - "1"
+    message: |
+      release 0.0.11
+    sha: 82273bcdca14b6b9091396eb487ff507dc8a13d9
+  - author:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      email: smlsun@gmail.com
+      login: smlsunxie
+      name: Smlsun Xie
+      url: https://github.com/smlsunxie
+    branch: master
+    committer:
+      creationTimestamp: "2018-08-18T08:44:08Z"
+      email: noreply@github.com
+      name: GitHub
+    message: |2-
+
+      Merge pull request #2 from smlsunxie/wip
+
+      fixes #1
+    sha: 94b700db6dd7e890941017fed353b592ee606f1f
+  gitCloneUrl: https://github.com/smlsunxie/node-http.git
+  gitHttpUrl: https://github.com/smlsunxie/node-http
+  gitOwner: smlsunxie
+  gitRepository: node-http
+  issues:
+  - closedBy:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      login: smlsunxie
+    creationTimestamp: "2018-08-18T08:19:56Z"
+    id: "1"
+    state: closed
+    title: add api
+    url: https://github.com/smlsunxie/node-http/issues/1
+    user:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      login: smlsunxie
+  name: '{{ .Chart.Name }}'
+  pullRequests:
+  - closedBy:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      login: smlsunxie
+    creationTimestamp: "2018-08-18T08:27:59Z"
+    id: "2"
+    state: closed
+    title: 'fixes #1'
+    url: https://github.com/smlsunxie/node-http/pull/2
+    user:
+      avatarUrl: https://avatars1.githubusercontent.com/u/1689227?v=4
+      login: smlsunxie
+  releaseNotesURL: https://github.com/smlsunxie/node-http/releases/tag/v0.0.11
+  version: v0.0.11
+status: {}

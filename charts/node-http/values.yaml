@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: 10.101.139.128:5000/smlsunxie/node-http
-  tag: 0.0.11
+  tag: 0.0.12
   pullPolicy: IfNotPresent
 service:
   name: node-http
