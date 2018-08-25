@@ -8,6 +8,10 @@ dependencies:
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.56
+- alias: db
+  name: mysql
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 0.10.1 
 - alias: preview
   name: node-http
   repository: file://../node-http
