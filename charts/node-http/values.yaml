@@ -40,8 +40,9 @@ mariadb:
   replication:
     enabled: false
   db:
-    name: node-http-db
-    user: node-http-user
+    name: "node-http-db"
+    user: "node-http-user"
+    password: "node-http-user-pass"
   master:
     persistence:
       enabled: true
