@@ -1,16 +1,3 @@
-appPassword: 123
-
-
-mariadb:
-  enabled: true
-  db:
-    name: node-http-db
-    user: node-http-user
-    password: node-http-user
-  master:
-    persistence:
-      storageClass: "managed-nfs-storage"
-
 expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
@@ -28,8 +15,6 @@ cleanup:
     helm.sh/hook-delete-policy: hook-succeeded
 
 preview:
-  mysql:
-    enabled: true
   image:
     repository:
     tag:

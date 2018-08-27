@@ -32,3 +32,15 @@ readinessProbe:
   successThreshold: 1
   timeoutSeconds: 1
 terminationGracePeriodSeconds: 10
+
+appPassword: 123
+
+mariadb:
+  enabled: true
+  db:
+    name: node-http-db
+    user: node-http-user
+    password: node-http-user
+  master:
+    persistence:
+      storageClass: "managed-nfs-storage"
