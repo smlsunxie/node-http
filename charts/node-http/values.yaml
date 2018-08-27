@@ -42,7 +42,9 @@ mariadb:
   db:
     name: node-http-db
     user: node-http-user
-    password: node-http-user
   master:
     persistence:
+      enabled: true
       storageClass: "managed-nfs-storage"
+      accessMode: ReadWriteOnce
+      size: 8Gi
