@@ -1,3 +1,20 @@
+appPassword: "123abc"
+
+mariadb:
+  enabled: true
+  replication:
+    enabled: false
+  db:
+    name: "node-http-db"
+    user: "node-http-user"
+    password: "node-http-user-pass"
+  master:
+    persistence:
+      enabled: true
+      storageClass: "managed-nfs-storage"
+      accessMode: ReadWriteOnce
+      size: 8Gi
+
 expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
