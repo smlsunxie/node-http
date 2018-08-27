@@ -1,20 +1,3 @@
-appPassword: "123abc"
-
-mariadb:
-  enabled: true
-  replication:
-    enabled: false
-  db:
-    name: "node-http-db"
-    user: "node-http-user"
-    password: "node-http-user-pass"
-  master:
-    persistence:
-      enabled: true
-      storageClass: "managed-nfs-storage"
-      accessMode: ReadWriteOnce
-      size: 8Gi
-
 expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
@@ -32,6 +15,22 @@ cleanup:
     helm.sh/hook-delete-policy: hook-succeeded
 
 preview:
+  appPassword: "123abc"
+
+  mariadb:
+    enabled: true
+    replication:
+      enabled: false
+    db:
+      name: "node-http-db"
+      user: "node-http-user"
+      password: "node-http-user-pass"
+    master:
+      persistence:
+        enabled: true
+        storageClass: "managed-nfs-storage"
+        accessMode: ReadWriteOnce
+        size: 8Gi
   image:
     repository:
     tag:
