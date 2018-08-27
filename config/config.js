@@ -7,7 +7,7 @@ module.exports = {
     username: "node-http-user",
     password: "node-http-user",
     database: "node-http-db",
-    host: "mysql.jx.svc.cluster.local",
+    host: "jx-smlsunxie-node-http-pr-4-db.jx-smlsunxie-node-http-pr-4.svc.cluster.local",
     dialect: 'mysql',
   },  
   test: {
