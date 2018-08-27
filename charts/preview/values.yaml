@@ -20,3 +20,12 @@ preview:
     repository:
     tag:
     pullPolicy: IfNotPresent
+  mysql:
+    enabled: true
+
+db:
+  mysqlUser: "node-http-user"
+  mysqlPassword: "node-http-user"
+  mysqlDatabase: "node-http-db"
+  persistence:
+    storageClass: "managed-nfs-storage"
