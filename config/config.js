@@ -1,8 +1,15 @@
 module.exports = {
+  // development: {
+  //   dialect: "sqlite",
+  //   storage: "./db.development.sqlite"
+  // },
   development: {
-    dialect: "sqlite",
-    storage: "./db.development.sqlite"
-  },
+    username: "node-http-user",
+    password: "node-http-user",
+    database: "node-http-db",
+    host: "mysql.jx.svc.cluster.local",
+    dialect: 'mysql',
+  },  
   test: {
     dialect: "sqlite",
     storage: ":memory:"

@@ -1,4 +1,11 @@
 
+db:
+  mysqlUser: "node-http-user"
+  mysqlPassword: "node-http-user"
+  mysqlDatabase: "node-http-db"
+  persistence:
+    storageClass: "managed-nfs-storage"
+
 expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
@@ -16,6 +23,8 @@ cleanup:
     helm.sh/hook-delete-policy: hook-succeeded
 
 preview:
+  mysql:
+    enabled: true
   image:
     repository:
     tag:

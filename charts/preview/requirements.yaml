@@ -1,5 +1,10 @@
 
 dependencies:
+- alias: db
+  name: mysql
+  repository: https://kubernetes-charts.storage.googleapis.com
+  condition: preview.mysql.enabled
+  version: 0.10.1
 - alias: expose
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
