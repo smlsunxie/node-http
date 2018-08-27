@@ -1,3 +1,5 @@
+appPassword: 123
+
 
 mariadb:
   enabled: true
