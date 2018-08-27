@@ -16,11 +16,10 @@ pipeline {
           PREVIEW_VERSION = "0.0.0-SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER"
           PREVIEW_NAMESPACE = "$APP_NAME-$BRANCH_NAME".toLowerCase()
           HELM_RELEASE = "$PREVIEW_NAMESPACE".toLowerCase()
-          NODE_ENV = "preview"
         }
         steps {
           container('nodejs') {
-            sh "npm install && npm install mysql"
+            sh "npm install"
             sh "CI=true DISPLAY=:99 npm test"
 
             sh 'export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml'
@@ -61,7 +60,7 @@ pipeline {
             }
           }
           container('nodejs') {
-            sh "npm install && npm install mysql"
+            sh "npm install"
             sh "CI=true DISPLAY=:99 npm test"
 
             // 透過 skaffold 建置新版號的 image

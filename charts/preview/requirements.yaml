@@ -1,9 +1,9 @@
 
 dependencies:
-- alias: db
-  name: mysql
-  repository: https://kubernetes-charts.storage.googleapis.com
-  condition: preview.mysql.enabled
+- name: mariadb
+  version: 4.x.x
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  condition: mariadb.enabled
   version: 0.10.1
 - alias: expose
   name: exposecontroller

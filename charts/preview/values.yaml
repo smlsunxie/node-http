@@ -1,10 +1,13 @@
 
-db:
-  mysqlUser: "node-http-user"
-  mysqlPassword: "node-http-user"
-  mysqlDatabase: "node-http-db"
-  persistence:
-    storageClass: "managed-nfs-storage"
+mariadb:
+  enabled: true
+  db:
+    name: node-http-db
+    user: node-http-user
+    password: node-http-user
+  master:
+    persistence:
+      storageClass: "managed-nfs-storage"
 
 expose:
   Annotations:
