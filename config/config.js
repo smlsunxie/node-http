@@ -14,7 +14,7 @@ module.exports = {
     username: "node-http-user",
     password: "node-http-user",
     database: "node-http-db",
-    host: `${process.env.HELM_RELEASE}-db.${process.env.HELM_RELEASE}.svc.cluster.local`,
+    host: `mysql`,
     dialect: 'mysql',
   },    
   test: {
