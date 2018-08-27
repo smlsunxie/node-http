@@ -37,6 +37,8 @@ appPassword: 123
 
 mariadb:
   enabled: true
+  replication:
+    enabled: false
   db:
     name: node-http-db
     user: node-http-user
