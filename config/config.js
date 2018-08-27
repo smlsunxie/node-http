@@ -10,16 +10,29 @@ module.exports = {
     host: "jx-smlsunxie-node-http-pr-4-db.jx-smlsunxie-node-http-pr-4.svc.cluster.local",
     dialect: 'mysql',
   },  
+  preview: {
+    username: "node-http-user",
+    password: "node-http-user",
+    database: "node-http-db",
+    host: `${process.env.HELM_RELEASE}-db.${process.env.HELM_RELEASE}.svc.cluster.local`,
+    dialect: 'mysql',
+  },    
   test: {
     dialect: "sqlite",
     storage: ":memory:"
   },
-  production: {
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOSTNAME,
+  staging: {
+    username: "node-http-user",
+    password: "node-http-user",
+    database: "node-http-db",
+    host: "jx-staging-node-http-db.jx-staging.svc.cluster.local",
     dialect: 'mysql',
-    use_env_variable: 'DATABASE_URL'
+  },
+  production: {
+    username: "node-http-user",
+    password: "node-http-user",
+    database: "node-http-db",
+    host: "jx-production-node-http-db.jx-production.svc.cluster.local",
+    dialect: 'mysql',
   }
 };
