@@ -32,3 +32,22 @@ readinessProbe:
   successThreshold: 1
   timeoutSeconds: 1
 terminationGracePeriodSeconds: 10
+
+appPassword: "123abc"
+
+mariadb:
+  enabled: true
+  replication:
+    enabled: false
+  db:
+    name: "node-http-db"
+    user: "node-http-db-user"
+    password: "node-http-db-user-pass"
+  rootUser:
+    password: "node-http-db-root-pass"    
+  master:
+    persistence:
+      enabled: true
+      storageClass: "managed-nfs-storage"
+      accessMode: ReadWriteOnce
+      size: 8Gi
