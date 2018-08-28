@@ -1,8 +1,30 @@
 # Express Example
 
+
 This repository demonstrates the usage of Sequelize within an [Express](https://expressjs.com) application.
 The implemented logic is a simple task tracking tool.
 
+## build
+
+```
+export BRANCH_NAME=PR-4
+export APP_NAME=node-http
+export PREVIEW_VERSION=0.0.0-SNAPSHOT-PR-4-64
+export PREVIEW_NAMESPACE=node-http-pr-4
+export HELM_RELEASE=node-http-pr-4 
+
+export DOCKER_REGISTRY=10.102.121.110:5000
+export ORG=smlsunxie
+
+export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml
+
+cd ./charts/preview
+make preview
+jx preview --app $APP_NAME --dir ../..
+
+helm upgrade --namespace jx-smlsunxie-node-http-pr-4 --install --wait --force --values /home/jenkins/node-http/charts/preview/values.yaml jx-smlsunxie-node-http-pr-4 .
+helm upgrade --namespace jx-smlsunxie-node-http-pr-4 --install --wait --force jx-smlsunxie-node-http-pr-4 .
+```
 
 ## Starting App
 
