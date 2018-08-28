@@ -37,12 +37,15 @@ appPassword: "123abc"
 
 mariadb:
   enabled: true
+
   replication:
     enabled: false
   db:
     name: "node-http-db"
-    user: "node-http-user"
-    password: "node-http-user-pass"
+    user: "node-http-db-user"
+    password: "node-http-db-user-pass"
+  rootUser:
+    password: "node-http-db-root-pass"    
   master:
     persistence:
       enabled: true
