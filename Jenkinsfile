@@ -28,9 +28,7 @@ pipeline {
             sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION"
           }
           dir ('./charts/node-http') {
-            container('nodejs') {
-              sh "helm dependency build"
-            }
+            sh "helm dependency build"
           }
           dir ('./charts/preview') {
            container('nodejs') {
