@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: 10.101.139.128:5000/smlsunxie/node-http
-  tag: 0.0.12
+  repository: 10.102.121.110:5000/smlsunxie/node-http
+  tag: 0.0.16
   pullPolicy: IfNotPresent
 service:
   name: node-http
