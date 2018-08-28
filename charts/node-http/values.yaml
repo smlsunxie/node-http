@@ -37,7 +37,6 @@ appPassword: "123abc"
 
 mariadb:
   enabled: true
-
   replication:
     enabled: false
   db:
